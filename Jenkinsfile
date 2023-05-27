@@ -22,13 +22,12 @@ pipeline {
         stage('Package') {
             steps {
                 sh 'mvn package'
-                stash includes: 'target/calculator.jar', name: 'artifact'
             }
         }
 
         stage('Deploy') {
             steps {
-                sh 'echo "Deployment Successfull"'
+                sh 'cp -R $WORKSPACE/calculator-pipeline/target/calculator-app-1.0-SNAPSHOT.jar /Users/i527379/Desktop'
             }
         }
     }
