@@ -27,7 +27,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'cp -R $WORKSPACE/calculator-pipeline/target/calculator-app-1.0-SNAPSHOT.jar /Users/i527379/Desktop'
+                sh 'cp -R $WORKSPACE/target/calculator-app-1.0-SNAPSHOT.jar /Users/i527379/Desktop'
             }
         }
     }
